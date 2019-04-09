@@ -1,4 +1,4 @@
-Module.register("MMM-alexa",{
+Module.register("MMM-Alexa",{
     defaults: {
     },
     start: function(){
@@ -41,7 +41,7 @@ Module.register("MMM-alexa",{
     },
     getStyles: function(){
         return [
-            this.file('alexa.css')
+            this.file('Alexa.css')
         ];
     },
     socketNotificationReceived: function(notification, payload) {
@@ -55,7 +55,7 @@ Module.register("MMM-alexa",{
             this.sendSocketNotification('SET_CONFIG', this.config);
         }
 
-        if(notification.startsWith('ALEXA_')){
+        if(notification.startsWith('ALEXA_') || notification==='ASSISTANT_ACTIVATE'){
             this.alexaRunner.notificationReceived(notification);
         }
     }

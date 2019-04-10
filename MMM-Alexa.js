@@ -55,7 +55,7 @@ Module.register("MMM-Alexa",{
             this.sendSocketNotification('SET_CONFIG', this.config);
         }
 
-        if(notification==='AMAZON_ACTIVATE'){
+        if(notification.startsWith('ALEXA_') || notification==='AMAZON_ACTIVATE'){
             this.alexaRunner.notificationReceived(notification);
         }
     }

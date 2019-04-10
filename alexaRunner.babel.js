@@ -4335,12 +4335,9 @@
                   () =>
                   { 
                     self.sendNotification("HOTWORD_PAUSE");
-                    //self._log("request mic successful");
                     self.avs.startRecording();
-                      
                     if(self.voiceActivityDetector){
                         setTimeout(function(){
-                            self.voiceActivityDetector.initialize();
                             self.voiceActivityDetector.startDetection();
                         }, 1000);
                     }

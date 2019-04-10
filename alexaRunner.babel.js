@@ -490,7 +490,8 @@
           this.emit(AVS.EventTypes.ERROR, error);
            reject(error);
         }
-  
+        
+        if(this._audioContext==null);
         this._audioContext = new AudioContext();
         this._sampleRate = this._audioContext.sampleRate;
   
@@ -4327,16 +4328,16 @@
       this.notificationReceived = function(notification){
           setStatus(self, notification);
   
-          if(notification === 'ALEXA_START_RECORDING' || notification==='ASSISTANT_ACTIVATE'){
+          if(notification === 'ALEXA_START_RECORDING' || notification==='AMAZON_ACTIVATE'){
               if(!self.listening){
                   self.listening = true;
                   self.avs.requestMic().then(
                   () =>
                   { 
+                    self.sendNotification("HOTWORD_PAUSE");
                     //self._log("request mic successful");
                     self.avs.startRecording();
-                    self.sendNotification("HOTWORD_PAUSE");
-  
+                      
                     if(self.voiceActivityDetector){
                         setTimeout(function(){
                             self.voiceActivityDetector.initialize();

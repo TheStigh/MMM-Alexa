@@ -1,28 +1,59 @@
 .alexa-hidden{
     display: none;
 }
+
 .alexa-notInitialized{
-    background-color: yellow;
-    width: 32px;
-    height: 32px;
+    content: '';
+    background:url('imgs/Notintialized.png');
+    background-size:cover;
+    position:absolute;
+    -webkit-filter:invert(100%);
+    width:80px;
+    height:80px;
+    margin-left:-20px;
 }
+
+/* Same as recordStop */
 .alexa-tokenSet{
-    background-color: red;
-    width: 32px;
-    height: 32px;
+    content: '';
+    background:url('imgs/DarkLightBlueCircle.gif');
+    background-size:cover;
+    position:absolute;
+    /*-webkit-filter:invert(100%);*/
+    width:80px;
+    height:80px;
+    margin-left:-20px;
 }
+
 .alexa-recordStart{
-    background-color: green;
-    width: 32px;
-    height: 32px;
+    content: '';
+    background:url('imgs/BlueTalking.gif');
+    background-size:cover;
+    position:absolute;
+    width:80px;
+    height:80px;
+    margin-left:-20px;
 }
+
+/* Same as tokenSet */
 .alexa-recordStop{
-    background-color: red;
-    width: 32px;
-    height: 32px;
+    content: '';
+    background:url('imgs/DarkLightBlueCircle.gif');
+    background-size:cover;
+    position:absolute;
+    width:80px;
+    height:80px;
+    /*-webkit-filter:invert(100%);*/
+    margin-left:-20px;
 }
+
 .alexa-broken{
-    background-color: magenta;
-    width: 32px;
-    height: 32px;
+    content: '';
+    background:url('imgs/Broken.gif');
+    background-size:cover;
+    position:absolute;
+    width:80px;
+    height:80px;
+    /*-webkit-filter:invert(100%);*/
+    margin-left:-20px;
 }

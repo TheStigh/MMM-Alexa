@@ -607,9 +607,10 @@
       return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         const url = 'https://access-alexa-na.amazon.com/v1/avs/speechrecognizer/recognize';
-        console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
-        console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< DATA SENDING TO AMAZON');
-        console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
+        //alexaRunner.sendNotification('SENDING_TO_AMAZON');
+        console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
+        console.log('<<<<<<<<<<<<<<<<<<<<<<< DATA SENDING TO AMAZON');
+        console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
         xhr.open('POST', url, true);
         xhr.responseType = 'arraybuffer';
         xhr.onload = (event) => {
@@ -902,11 +903,7 @@
       return new Promise((resolve, reject) => {
         if (this._context.state === 'suspended') {
           this._context.resume();
-  
           this._log('Play audio');
-          console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
-          console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SHE SPEAKS!');
-          console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
           this.emit(Player.EventTypes.PLAY);
           resolve();
         } else if (this._audio && this._audio.paused) {
@@ -918,11 +915,21 @@
           return this.deque()
           .then(audioBuffer => {
             this._log('Play audio');
+            //this.sendNotification('AMAZON_SPEAKS');
+            console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
+            console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SHE SPEAKS 1');
+            console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
             this.emit(Player.EventTypes.PLAY);
             if (typeof audioBuffer === 'string') {
               return this.playUrl(audioBuffer);
+              console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
+              console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SHE SPEAKS 2');
+              console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
             }
             return this.playAudioBuffer(audioBuffer);
+            console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
+            console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SHE SPEAKS 3');
+            console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
           }).then(resolve);
         }
       });

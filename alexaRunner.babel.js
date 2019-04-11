@@ -62,6 +62,7 @@
       this._deviceSerialNumber = null;
       this._redirectUri = null;
       this._audioQueue = [];
+      this._runner = options.runner;
   
       if (options.token) {
         this.setToken(options.token);
@@ -95,7 +96,7 @@
         this.setDebug(options.debug);
       }
   
-      this.player = new Player();
+      this.player = new Player({runner: this._runner});
     }
   
     _log(type, message) {
@@ -607,10 +608,7 @@
       return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         const url = 'https://access-alexa-na.amazon.com/v1/avs/speechrecognizer/recognize';
-        //alexaRunner.sendNotification('SENDING_TO_AMAZON');
-        console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
-        console.log('<<<<<<<<<<<<<<<<<<<<<<< DATA SENDING TO AMAZON');
-        console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
+        this._runner.sendNotification('SENDING_TO_AMAZON'); // REMARK 2
         xhr.open('POST', url, true);
         xhr.responseType = 'arraybuffer';
         xhr.onload = (event) => {
@@ -814,13 +812,14 @@
   const toString = Object.prototype.toString;
   
   class Player {
-    constructor() {
+    constructor(options) {
       window.AudioContext = window.AudioContext || window.webkitAudioContext;
   
       this._queue = [];
       this._currentSource = null;
       this._currentBuffer = null;
       this._context = new AudioContext();
+      this._runner = options.runner;
   
       Observable(this);
     }
@@ -903,33 +902,25 @@
       return new Promise((resolve, reject) => {
         if (this._context.state === 'suspended') {
           this._context.resume();
+  
           this._log('Play audio');
           this.emit(Player.EventTypes.PLAY);
           resolve();
         } else if (this._audio && this._audio.paused) {
-          this._log('Play audio');
+          this._log('Play audio');        
           this.emit(Player.EventTypes.PLAY);
           this._audio.play();
           resolve();
         } else {
           return this.deque()
-          .then(audioBuffer => {
+          .then((audioBuffer) => {
             this._log('Play audio');
-            //this.sendNotification('AMAZON_SPEAKS');
-            console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
-            console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SHE SPEAKS 1');
-            console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
             this.emit(Player.EventTypes.PLAY);
+            this._runner.sendNotification('AMAZON_SPEAKS'); // REMARK 1          
             if (typeof audioBuffer === 'string') {
               return this.playUrl(audioBuffer);
-              console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
-              console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SHE SPEAKS 2');
-              console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
             }
             return this.playAudioBuffer(audioBuffer);
-            console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
-            console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SHE SPEAKS 3');
-            console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
           }).then(resolve);
         }
       });
@@ -4376,7 +4367,6 @@
                   processSpeech(self).then(
                      ({directives, audioMap}) => {
                       runDirectives(self, directives, audioMap);
-                       self.sendNotification("HOTWORD_RESUME");
                      },
                      (error) => {
                        self.sendNotification("HOTWORD_RESUME");
@@ -4384,6 +4374,8 @@
                   );
                  
               }
+          } else if(notification === 'ALEXA_PLAY_COMPLETED'){
+            self.sendNotification("HOTWORD_RESUME");
           }
       };
   
@@ -4422,7 +4414,8 @@
               deviceSerialNumber: 1234,
               token: localStorage.getItem('avsToken'),
               redirectUri: 'https://thestigh.github.io/MMM-Alexa/',
-              refreshToken: localStorage.getItem('avsRefreshToken')
+              refreshToken: localStorage.getItem('avsRefreshToken'),
+              runner: alexaRunner
           });
   
           alexaRunner.avs.on(AVS.EventTypes.TOKEN_SET, function(){
@@ -4578,18 +4571,22 @@
           // beep
   
           return function(){
+  
+               
               if (directives.length > 1){
-                  self.alexaRunner.avs.player.one(AVS.Player.EventTypes.ENDED, () => {
+                  self.alexaRunner.avs.player.on(AVS.Player.EventTypes.ENDED, () => {  // was .one
                       self.alexaRunner.sendNotification('ALEXA_START_RECORDING');
                   });
               }else{
                   setTimeout(function(){
                       self.alexaRunner.sendNotification('ALEXA_START_RECORDING');
                   }, timeout); // was 2000
-               }
+               } 
           }();
       };
-  
+      self.alexaRunner.avs.player.on(AVS.Player.EventTypes.ENDED, () => {  // was .one
+          self.alexaRunner.sendNotification('ALEXA_PLAY_COMPLETED');
+      });
       var promises = [];
   
       // directive running
@@ -4627,9 +4624,18 @@
           case 'ALEXA_RECORD_START':
               statusIndicator.className = 'alexa-recordStart';
               break;
-          case 'ALEXA_RECORD_STOP':
-              statusIndicator.className = 'alexa-recordStop';
+//          case 'ALEXA_RECORD_STOP':
+//              statusIndicator.className = 'alexa-recordStop';
+//              break;
+          case 'AMAZON_SPEAKS':
+          statusIndicator.className = 'alexa-tellAnswering';
               break;
+          case 'SENDING_TO_AMAZON':
+          statusIndicator.className = 'alexa-sendWaiting';
+              break;
+          case 'ALEXA_PLAY_COMPLETED':
+          statusIndicator.className = 'alexa-tokenSet';
+              break;              
       }
   }
   

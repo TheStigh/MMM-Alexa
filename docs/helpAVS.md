@@ -22,7 +22,9 @@ On following page; fill inn following information:
 > Please note more fields than you initially see will pop up as you fill in your answers.
 
 | Argument | Description |
+
 |---|
+
 | **`avcDeviceId`** | The device/product id  that you've created at Amazon |
 | **`avsClientId`** | The client id which is generated at Amazon |
 | **`avsClientSecret`** | The client secret which is generated at Amazon |

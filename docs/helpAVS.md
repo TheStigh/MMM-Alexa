@@ -14,22 +14,33 @@ Now, you will need to copy and paste this link into your browser:
 
 https://developer.amazon.com/alexa/console/avs/products
 
-Click **CREATE PRODUCT**
+> Click **CREATE PRODUCT**
 
 On following page; fill inn following information:
 
 > Please note more fields than you initially see will pop up as you fill in your answers.
+
+> During this process, make a note of following as you will need it in step X
+> **Client ID, Client Secret & Product ID**
 
 | Argument |  | Description |
 |---|---|---|
 | Product name |  | Fill in a name for your device/product, like *My MagicMirror Project* |
 | Product ID |  | Fill in your unique product ID, like *MagicMirror* |
 | Please select your product type |  | Select **Application with Alexa built-in** |
-| Will your device use a companion app? |  | Select **No** |
 | Product category |  | Select what ever you want, like *Smart Home* |
 | Brief product description |  | Give it a description, like *This is my project* |
+| How will end users interact with your product? |  | Select **Hands-Free** |
 | Do you intend to distribute this product commercially? |  | Select **No** |
-| Will your device be used for Alexa for Business? |  | Select **No** |
-| Is this device associated with one or more AWS IoT Core Accounts? |  | Select **No** |
 | Is this a children’s product or is it otherwise directed to children younger than 13 years old? |  | Select **No** |
+
+On next page, use the dropdown list and select the Security Profile you created earlier
+Then the page is extended, and you will need to add two more lines to it to get finished:
+
+| Argument |  | Description |
+|---|---|---|
+| Allowed origins |  | Type in **https://localhost:9745** |
+| Allowed return URLs |  | Type in **https://thestigh.github.io/MMM-Alexa/ |
+
+Check the *Agreement*, click FINISH and you have set up your Amazon account!
 

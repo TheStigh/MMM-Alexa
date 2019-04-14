@@ -23,15 +23,18 @@ On following page; fill inn following information:
 
 The following properties can be configured:
 
-| Argument | Description |
-|---|
-| **`avcDeviceId`** | The device/product id  that you've created at Amazon |
-| **`avsClientId`** | The client id which is generated at Amazon |
-| **`avsClientSecret`** | The client secret which is generated at Amazon |
-| **`avsInitialCode`** | The initial code for authentication |
-| **`hideStatusIndicator`** | Hide status indicator on the MM |
-| **`debug`** | `Add `alexaStart()` and `alexaStop()` commands to the MM console |
-| **`enableRaspberryButton`** | Enable starting to record with pressing button which is connected to GPIO |
+| Argument | `""` | Description |
+|---|---|---|
+| **`Product name`** | `""` | The device/product id  that you've created at Amazon |
+| **`Product ID`** | `""` | The client id which is generated at Amazon |
+| **`Please select your product type`** | `""` | The client secret which is generated at Amazon |
+| **`Will your device use a companion app?`** | `""` | The initial code for authentication |
+| **`Product category`** | `false` | Hide status indicator on the MM |
+| **`Brief product description`** | `false` | Add `alexaStart()` and `alexaStop()` commands to the MM console |
+| **`Do you intend to distribute this product commercially?`** | `false` | Disable voice activity detection(VAD), it's used to understand when the user stops speaking |
+| **`Will your device be used for Alexa for Business?`** | `false` | Enable starting to record with pressing button which is connected to GPIO |
+| **`Is this device associated with one or more AWS IoT Core Accounts?`** | `""` | The device/product id  that you've created at Amazon |
+| **`Is this a children’s product or is it otherwise directed to children younger than 13 years old?`** | `""` | The client id which is generated at Amazon |
 
 
 ** Product name** : Fill in a name for your device/product, like *My MagicMirror Project*

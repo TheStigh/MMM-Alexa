@@ -1,7 +1,8 @@
 # Module: MMM-Alexa
-Alexa module allows MagicMirror to connect Amazon Alexa Voice Synthesis(AVS) service without requiring anything else. 
 
-> Please note: This module do not contain it's own hotword.
+MMM-Alexa module allows MagicMirror to connect Amazon Alexa Voice Synthesis (AVS) service without requiring anything else. 
+
+> This module do not contain it's own hotword.
 > You will need an external module for this, like [MMM-VoiceCommander](https://github.com/thestigh/MMM-VoiceCommander) to activate Alexa
 
 ## Installation and requirements
@@ -88,19 +89,13 @@ The following properties can be configured:
 
 ### 3. Adding MagicMirror to Amazon AVS Service
 
-You have to be registered to Amazon AVS service, and add MagicMirror as device with using your account in order to use Amazon Alexa service.
+You have to be registered to Amazon AVS service, and add you MagicMirror as device/product with using your account in order to use Amazon Alexa service.
 
 Follow this help page to get up and running with Amazon. ***TODO: add instructions***
 
 > Remember that each initial code can be used only once, then it's being converted to token by the module. So if you run your mirror at your computer for testing, you should gather another code.
 
-
-### 3. OPTIONAL: Raspberry Pi Button to start recording
-
-Button should be connected to GPIO pin 4. The button is used only to start recording.
-Do not forget to enable Raspberry Pi button in config. 
-
-### 4. Installing microphone dependencies
+### 3. Installing microphone dependencies
 
 After installation you need to check your **audio setup**, as this module also relies on *arecord/aplay*.
 From your home directory, run command:
@@ -130,6 +125,11 @@ pcm.!default {
 Then run this command :
 
 `amixer cset numid=3 1`
+
+### 4. OPTIONAL: Raspberry Pi Button to start recording
+
+Button should be connected to GPIO pin 4. The button is used only to start recording.
+Do not forget to enable Raspberry Pi button in config. 
 
 ## Tested on
 

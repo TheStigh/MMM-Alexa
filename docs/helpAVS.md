@@ -29,7 +29,8 @@ You will need to register an account at Amazon Developer, [click here to get sta
 <p align="left">
    <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/imgs/5_amazon_profile_created.png" height="300">
 <p>
- 
+
+***
 
 ## 2. Time to create your Alexa product
 Now, you will need to copy and paste this link into your browser:
@@ -70,7 +71,9 @@ Then the page is extended, and you will need to add two more lines to it to get 
 
 > Allowed return URLs - Type in **https://thestigh.github.io/MMM-Alexa/** and click ADD
 
-Check the ***Agreement***, click **FINISH** and you have set up your Amazon account!
+Check the ***Agreement***, click **FINISH** and you have set up your product!
+
+***
 
 ## 3. Create your 'avsInitialCode'
 
@@ -78,7 +81,7 @@ Go to **[following page](https://thestigh.github.io/MMM-Alexa/)** and copy/paste
 
 *Fill in your details according to this example and click 'Request Code'*
 <p align="left">
-   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/7_amazon_create_avs.png" height="300">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/imgs/7_amazon_create_avs.png" height="300">
 <p>
 
 you will most likely get prompted to login in.
@@ -92,5 +95,7 @@ At the end, you will return to the original page and have received the ***avsIni
 <p align="left">
    <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/imgs/9_amazon_avs_received.png" height="300">
 <p>
+
+***
 
 # YOU ARE GOOD TO GO!

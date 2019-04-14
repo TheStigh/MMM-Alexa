@@ -23,22 +23,8 @@ On following page; fill inn following information:
 
 The following properties can be configured:
 
-| Argument | Default | Description |
-|---|---|---|
-| **`avcDeviceId`** | `""` | The device/product id  that you've created at Amazon |
-| **`avsClientId`** | `""` | The client id which is generated at Amazon |
-| **`avsClientSecret`** | `""` | The client secret which is generated at Amazon |
-| **`avsInitialCode`** | `""` | The initial code for authentication |
-| **`hideStatusIndicator`** | `false` | Hide status indicator on the MM |
-| **`debug`** | `false` | Add `alexaStart()` and `alexaStop()` commands to the MM console |
-| **`disableVoiceActivityDetection`** | `false` | Disable voice activity detection(VAD), it's used to understand when the user stops speaking |
-| **`enableRaspberryButton`** | `false` | Enable starting to record with pressing button which is connected to GPIO |
-
-
 | Argument | Description |
-
 |---|
-
 | **`avcDeviceId`** | The device/product id  that you've created at Amazon |
 | **`avsClientId`** | The client id which is generated at Amazon |
 | **`avsClientSecret`** | The client secret which is generated at Amazon |

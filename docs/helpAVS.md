@@ -8,6 +8,7 @@ You will need to register an account at Amazon Developer, [click here to get sta
 <p align="center">
    <img src="1_amazon_create_account.png" height="300">
 <p>
+ 
 image 1
 image 2
 ...

@@ -1,70 +1,114 @@
+# Module: MMM-Alexa
+Alexa module allows MagicMirror to connect Amazon Alexa Voice Synthesis(AVS) service without requiring anything else. 
 
-<p align="center">
-   <img src="https://user-images.githubusercontent.com/2917613/28090232-861702b0-6683-11e7-8379-1347e01c9411.png" height="300">
-<p>
+> Please note: This module do not contain it's own hotword, you will need an external module for this, like [MMM-VoiceCommander](https://github.com/thestigh/MMM-VoiceCommander) to activate Alexa
 
-# MMM-Alexa
-Alexa module allows MagicMirror to connect Amazon Alexa Voice Synthesis(AVS) service without requiring anything else.
+TODO: add demo video link
 
-## Usage
+## Installation and requirements
+
+Start by doing the commands below to make the initial installation: 
+
+> Perform the commands from ***~/MagicMirror/modules*** directory
+
+```
+git clone https://github.com/thestigh/MMM-Alexa
+cd MMM-Alexa
+npm install
+```
+
+After installation you need to check your **audio setup**, as this module also relies on *arecord/aplay*.
+From your home directory, run command:
+
+> ***sudo nano ~/.asoundrc***
+
+If it is empty, copy following code to the editor (values might need to be changed):
+
+```
+pcm.!default{
+  type asym
+  playback.pcm{
+     type plug
+     slave.pcm "hw:0,0"
+  }
+
+  capture.pcm{
+    type plug
+    slave.pcm "hw:0, 0"
+  }
+}
+
+ctl.!default{
+  type hw
+  card 0
+}
+```
+
+> Do you want help to confiure or just deeper understanding *arecord*, [click here](https://github.com/TheStigh/MMM-VoiceCommander/tree/master/docsarecordHelp.md)
+
+Then make sure you set the **hw:** and the  **card** vales according to your own hardware configuration (you get the output at the end of installerscript you just ran) where hw:0,0 representt output and hw:1,0 represent input source. Or you can run the command over again to see the outputs by running `cat /proc/asound/cards`
+
+> ***Save and close*** nano editor
+
+
+## Config.js entries and options
+
+### 1. config.js
 To use this module, add it to the modules array in the config/config.js file:
 
 ```
-	{
-		module: 'MMM-alexa',
-		position: 'top_right',
-		config: {
-		    avsDeviceId: 'my_device',
-		    avsClientId: 'amzn1.application-oa2-client.********...',
-		    avsClientSecret: '*******...',
-		    avsInitialCode: 'ANV**********',
+{
+       module: 'MMM-alexa',
+       position: 'top_right', // The status indicator position
+           config: {                                                    // See 'Configuration options' for more information
+		    avsDeviceId: 'my_device/product',
+		    avsClientId: 'amzn1.application-oa2-client.***abcdefgh***',
+		    avsClientSecret: '***abcdefgh***',
+		    avsInitialCode: '***ANVabcdefgh***',
 		    enableRaspberryButton: true
-		}
-	},
+		    }
+},
 ```
+> Replace the ***abcdefgh*** with values from later steps 
 
-## Configuration options
+### 2. Configuration options
 
 The following properties can be configured:
 
 | Argument | Default | Description |
 |---|---|---|
-| **`avcDeviceId`** | `""` | The device id  that you've created at Amazon. |
-| **`avsClientId`** | `""` | The client id which is generated at Amazon. |
-| **`avsClientSecret`** | `""` | The client secret which is generated at Amazon. |
-| **`avsInitialCode`** | `""` | The initial code for authentication. |
-| **`hideStatusIndicator`** | `false` | Hide status indicator on the mirror. |
-| **`debug`** | `false` | Add `alexaStart()` and `alexaStop()` commands to the Javascript console. |
-| **`disableVoiceActivityDetection`** | `false` | Disable voice activity detection(VAD), it's used to understand when the user stops speaking. |
-| **`enableRaspberryButton`** | `false` | Enable starting to record with pressing button which is connected to GPIO. |
+| **`avcDeviceId`** | `""` | The device/product id  that you've created at Amazon |
+| **`avsClientId`** | `""` | The client id which is generated at Amazon |
+| **`avsClientSecret`** | `""` | The client secret which is generated at Amazon |
+| **`avsInitialCode`** | `""` | The initial code for authentication |
+| **`hideStatusIndicator`** | `false` | Hide status indicator on the MM |
+| **`debug`** | `false` | Add `alexaStart()` and `alexaStop()` commands to the MM console |
+| **`disableVoiceActivityDetection`** | `false` | Disable voice activity detection(VAD), it's used to understand when the user stops speaking |
+| **`enableRaspberryButton`** | `false` | Enable starting to record with pressing button which is connected to GPIO |
 
 
-## 1. Adding MagicMirror to Amazon AVS Service
+### 3. Adding MagicMirror to Amazon AVS Service
 
 You have to be registered to Amazon AVS service, and add MagicMirror as device with using your account in order to use Amazon Alexa service.
 
-After following the steps you should be able to gather all the parameters required to run Alexa on the MagicMirror.
+Follow this help page to get up and running with Amazon. ***TODO: add instructions***
 
-Remember that each initial code can be used only once, then it's being converted to token by the module. So if you run your mirror at your computer for testing, you should gather another code.
-
-TODO: add instructions
-
-[https://sakirtemel.github.io/MMM-alexa/](https://sakirtemel.github.io/MMM-alexa/)
+> Remember that each initial code can be used only once, then it's being converted to token by the module. So if you run your mirror at your computer for testing, you should gather another code.
 
 
-## 2. Raspberry Pi Button to start recording
+### 3. OPTIONAL: Raspberry Pi Button to start recording
 
 Button should be connected to GPIO pin 4. The button is used only to start recording.
-
 Do not forget to enable Raspberry Pi button in config. 
 
-## 3. Installing microphone dependencies
+### 4. Installing microphone dependencies
 
-Connect your usb microphone and find the devises with using
+After installation you need to check your **audio setup**, as this module also relies on *arecord/aplay*.
+From your home directory, run command:
 
-`aplay -l` and `arecord -l` commands.
+> ***sudo nano ~/.asoundrc***
 
-Change hw:0,0 and hw:1,0 with the output and input source corresponding.
+If it is empty, copy following code to the editor (values might need to be changed):
 
 ```
 pcm.!default {
@@ -80,60 +124,40 @@ pcm.!default {
 }
 ```
 
-Then run this command
+> Do you want help to configure or just deeper understanding *arecord*, [click here](https://github.com/TheStigh/MMM-VoiceCommander/tree/master/docsarecordHelp.md)
+
+> ***Save and close*** nano editor
+
+Then run this command :
 
 `amixer cset numid=3 1`
 
-## Events
-
-This module has been designed in a way that it can interact with other modules. You can easily develop your own module and control this module or get notified about events happening.
-
-You can send the commands from your module like:
-
-`this.sendNotification('ALEXA_START_RECORDING', {});`
-
-##### The possible commands that you can send to the module:
-
-`ALEXA_START_RECORDING` : It will start recording, and if VAD is enabled will stop when the speech is end.
-
-`ALEXA_STOP_RECORDING` : It will stop recording, and send the recorded voice to AVS for getting directives.
-
-##### The possible events that you can receive at your module:
-
-`ALEXA_TOKEN_SET` : It means that the module is successfully initialized with configuration and ready to start for recording. 
- 
-`ALEXA_RECORD_START` : Right now the record is started.
- 
-`ALEXA_RECORD_STOP` : The record is stopped and the voice is being sent to AVS.
-
-`ALEXA_VAD_VOICE_DETECTION_START` : There's a voice activity right now.
-
-`ALEXA_VAD_VOICE_DETECTION_STOP` : Voice activity ended.
- 
 ## Tested on
 
-- Jessie lite clean install [https://github.com/MichMich/MagicMirror/wiki/Jessie-Lite-Installation-Guide](https://github.com/MichMich/MagicMirror/wiki/Jessie-Lite-Installation-Guide)
-- Raspbery Pi 2
-- Bluemic Snowball Microphone
+| Hardware Platform    |   Operating System   | Notes                                                                                                                                                                                                                                                                                             |
+| -------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| HP Elite 8300        | ✔  Ubuntu 18.04 LTS  | -                                                                                                                                                                                                                                                                                                 |
+| HP Elite HPEu        | ✔  Ubuntu 16.04 LTS  | -                                                                                                                                                                                                                                                                                                 |
+| HP G60 Laptop        | ✔  Ubuntu 18.04 LTS  | -                                                                                                                                                                                                                                                                                                 |
+| Huawei Matebook Pro  | ✔  Ubuntu 16.04 LTS  | -                                                                                                                                                                                                                                                                                                 |
+| Intel NUC Celeron    | ✔  Ubuntu 16.04 LTS  | -                                                                                                                                                                                                                                                                                                 |
+| Tinker Board S       | ✔  TinkerOS 2.0.8    | -                                                                                                                                                                                                                                                                                                 |
+| Raspberry Pi 3b+     | ✔  Debian Stretch    | -                                                                                                                                                                                                                                                                                                 |
+| Odroid               | ✘                    | Need somebody to test on Odroid!                                                            |
+| Windows              | ✘                    | Need somebody to test on Windows!                                                            |
+
+
 
 ## Development
 
 Feel free to create Pull Requests, or issues as new ideas. Current plan for development is listed below.
   
   * Improve voice activity detection
-  * Add wake up keyword support
-  * Add blinking leds on Raspberry Pi
-  * Add voice spectrum while talking on the mirror(instead of status indicator)
-  * Add tutorials about AVS and provide links for ASK
-  * Add error sound on empty response
-  * Fix threading issues, it hangs when there are multiple commands sent
-  * Add blog post link
+
 
 ## Special thanks
 
-[https://github.com/miguelmota/alexa-voice-service/](https://github.com/miguelmota/alexa-voice-service/) for creating such nice library for Javascript.
-
-[https://github.com/MichMich/MagicMirror/](https://github.com/MichMich/MagicMirror/) for inspirations and building well designed framework.
+> I can't thank ***sdetweil*** enough for his great help with attach/release control of microphone ++
 
 ## Licence
 

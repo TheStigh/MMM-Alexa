@@ -19,7 +19,7 @@ Click **CREATE PRODUCT**
 
 On following page; fill inn following information:
 
-> Please note more fields than you initially see will pop up as you fill in your answers
+> Please note more fields than you initially see will pop up as you fill in your answers.
 
 | Argument | Description |
 |---|

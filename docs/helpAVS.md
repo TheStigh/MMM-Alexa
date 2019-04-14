@@ -1,5 +1,7 @@
 ## How to get up and running with Amazon Voice Synthesis (AVS) services
 
+***
+
 > **For easier steps, please keep the browser open at each step, and copy/paste the links from step 2**
 
 ***

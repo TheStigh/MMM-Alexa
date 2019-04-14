@@ -45,11 +45,8 @@ On following page; fill inn following information:
 
 ***During this process, make a note of following as you will need some in step 3, and all in config.js***
 > avsDeviceId = Product ID
-
 > avsClientId = Client ID
-
 > avsClientSecret = Client Secret
-
 > avsInitialCode= Initial Code
 
 
@@ -85,7 +82,7 @@ Go to **[following page](https://thestigh.github.io/MMM-Alexa/)** and copy/paste
 <p>
 
 you will most likely get prompted to login in.
-After this step, you should be asked to GRANT access, which you obviously accept:
+After this step, you should be asked to ALLOW access, which you obviously accept:
 <p align="left">
    <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/imgs/8_amazon_avs_grant.png" height="300">
 <p>

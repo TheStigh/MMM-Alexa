@@ -5,13 +5,31 @@
 #### 1. Register an account
 You will need to register an account at Amazon Developer, [click here to get started](https://www.amazon.com/ap/register?openid.pape.max_auth_age=1&openid.return_to=https%3A%2F%2Fdeveloper.amazon.com%2Fap_login.html&prevRID=58N9KKJN1AEBPGJDP3K1&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=mas_dev_portal&openid.mode=checkid_setup&prepopulatedLoginId=&failedSignInCount=0&language=en_US&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=amzn_developer_portal&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0).
 
+**REGISTER ACCOUNT**
 <p align="center">
-   <img src="1_amazon_create_account.png" height="300">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/1_amazon_create_account.png" height="300">
+<p>
+
+**SELECT 'LOGIN WITH AMAZON'**
+<p align="center">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/2_amazon_logged_in.png" height="300">
+<p>
+
+**SELECT 'CREATE A NEW LOGIN PROFILE'**
+<p align="center">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/3_amazon_create_security_profile.png" height="300">
+<p>
+
+**FILL IN THE REQUIRED INFORMATION**
+<p align="center">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/4_amazon_creating_profile.png" height="300">
+<p>
+
+**HERE YOU ARE FINISHED CREATING THE SECURITY PROFILE**
+<p align="center">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/5_amazon_profile_created.png" height="300">
 <p>
  
-image 1
-image 2
-...
 
 #### 2. Time to create your Alexa product
 Now, you will need to copy and paste this link into your browser:

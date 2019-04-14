@@ -46,7 +46,7 @@ ctl.!default{
 }
 ```
 
-> Do you want help to confiure or just deeper understanding *arecord*, [click here](https://github.com/TheStigh/MMM-VoiceCommander/tree/master/docs/arecordHelp.md)
+> Do you want help to configure or just deeper understanding *arecord*, [click here](https://github.com/TheStigh/MMM-VoiceCommander/tree/master/docs/arecordHelp.md)
 
 Then make sure you set the **hw:** and the  **card** vales according to your own hardware configuration (you get the output at the end of installerscript you just ran) where hw:0,0 represent output and hw:1,0 represent input source.
 

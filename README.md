@@ -6,8 +6,8 @@
 
 MMM-Alexa module allows MagicMirror to connect Amazon Alexa Voice Synthesis (AVS) service without requiring anything else. 
 
-> This module do not contain it's own hotword.
-> You will need an external module for this like [MMM-VoiceCommander](https://github.com/thestigh/MMM-VoiceCommander) to activate Alexa. Have a look at [MMM-VoiceCommander](https://github.com/thestigh/MMM-VoiceCommander) as it more than a **hotword** module.
+> This module do not contain it's own **hotword**.
+> You will need an external module for this like **[MMM-VoiceCommander]**(https://github.com/thestigh/MMM-VoiceCommander) to activate Alexa. Have a look at **[MMM-VoiceCommander]**(https://github.com/thestigh/MMM-VoiceCommander) as it more than a **hotword** module.
 
 ## Installation and requirements
 

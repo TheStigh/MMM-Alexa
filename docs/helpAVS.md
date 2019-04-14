@@ -5,27 +5,27 @@
 #### 1. Register an account
 You will need to register an account at Amazon Developer, [click here to get started](https://www.amazon.com/ap/register?openid.pape.max_auth_age=1&openid.return_to=https%3A%2F%2Fdeveloper.amazon.com%2Fap_login.html&prevRID=58N9KKJN1AEBPGJDP3K1&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=mas_dev_portal&openid.mode=checkid_setup&prepopulatedLoginId=&failedSignInCount=0&language=en_US&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=amzn_developer_portal&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0).
 
-**REGISTER ACCOUNT**
+*Register Account*
 <p align="center">
    <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/1_amazon_create_account.png" height="300">
 <p>
 
-**SELECT 'LOGIN WITH AMAZON'**
+*Click 'Login with Amazon'*
 <p align="center">
    <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/2_amazon_logged_in.png" height="300">
 <p>
 
-**SELECT 'CREATE A NEW LOGIN PROFILE'**
+*Click 'Create a New Login Profile'*
 <p align="center">
    <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/3_amazon_create_security_profile.png" height="300">
 <p>
 
-**FILL IN THE REQUIRED INFORMATION**
+*Fill in the required information for your Security Profile*
 <p align="center">
    <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/4_amazon_creating_profile.png" height="300">
 <p>
 
-**HERE YOU ARE FINISHED CREATING THE SECURITY PROFILE**
+*Here you are finished creating the Security Profile*
 <p align="center">
    <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/5_amazon_profile_created.png" height="300">
 <p>
@@ -75,10 +75,25 @@ Check the ***Agreement***, click **FINISH** and you have set up your Amazon acco
 
 #### 3. Create your 'avsInitialCode'
 
-Go to **[following page](https://thestigh.github.io/MMM-Alexa/)** and copy/paste the fields you recorded during step 2.
+Go to **[following page](https://thestigh.github.io/MMM-Alexa/)** and copy/paste **Client ID & Product ID** recorded during step 2.
+
+*Fill in your details according to this example*
+<p align="center">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/7_amazon_create_avs.png" height="300">
+<p>
+
+**Click 'Request Code'**
 
 you will most likely get prompted to login in.
-After this step, you should be asked to GRANT access, which you obviously accept.
-At the end, you will return to the original page and have received the 'avsInitialCode'
+After this step, you should be asked to GRANT access, which you obviously accept:
+<p align="center">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/8_amazon_avs_grant.png" height="300">
+<p>
+ 
 
+At the end, you will return to the original page and have received the ***avsInitialCode***
+<p align="center">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/9_amazon_avs_received.png" height="300">
+<p>
 
+# YOU ARE GOOD TO GO!

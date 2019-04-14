@@ -59,7 +59,7 @@ Then make sure you set the **hw:** and the  **card** vales according to your own
 
 To use this module, you have to be registered to Amazon AVS service and add you MagicMirror as device/product with using your account in order to use Amazon Alexa service.
 
-Follow this help page to get up and running with Amazon. ***TODO: add instructions***
+Follow [this help page](https://github.com/TheStigh/MMM-Alexa/tree/master/docs/helpAVS.md) to get up and running with Amazon. ***TODO: add instructions***
 
 > Remember that each initial code can be used only once, then it's being converted to token by the module. So if you run your mirror at your computer for testing, you should gather another code.
 

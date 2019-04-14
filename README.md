@@ -85,16 +85,16 @@ Add it to the modules array in the config/config.js file:
 
 The following properties can be configured:
 
-| Argument | Default | Description |
-|---|---|---|
-| **`avcDeviceId`** | `""` | The device/product id  that you've created at Amazon |
-| **`avsClientId`** | `""` | The client id which is generated at Amazon |
-| **`avsClientSecret`** | `""` | The client secret which is generated at Amazon |
-| **`avsInitialCode`** | `""` | The initial code for authentication |
-| **`hideStatusIndicator`** | `false` | Hide status indicator on the MM |
-| **`debug`** | `false` | Add `alexaStart()` and `alexaStop()` commands to the MM console |
-| **`disableVoiceActivityDetection`** | `false` | Disable voice activity detection(VAD), it's used to understand when the user stops speaking |
-| **`enableRaspberryButton`** | `false` | Enable starting to record with pressing button which is connected to GPIO |
+Argument | Description
+ -------------  | -------------
+**`avcDeviceId`** | The device/product id  that you've created at Amazon
+**`avsClientId`** | The client id which is generated at Amazon
+**`avsClientSecret`** | The client secret which is generated at Amazon
+**`avsInitialCode`** | The initial code for authentication
+**`hideStatusIndicator`** | Hide status indicator on the MM
+**`debug`** | `false/true` Add `alexaStart()` and `alexaStop()` commands to the MM console
+**`disableVoiceActivityDetection`** | `false/true` Disable voice activity detection(VAD), it's used to understand when the user stops speaking
+**`enableRaspberryButton`** | `false/true` Enable starting to record with pressing button which is connected to GPIO
 
 
 ### 4. Installing microphone dependencies

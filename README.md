@@ -1,3 +1,7 @@
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/2917613/28090232-861702b0-6683-11e7-8379-1347e01c9411.png" height="300">
+<p>
+
 # Module: MMM-Alexa
 
 MMM-Alexa module allows MagicMirror to connect Amazon Alexa Voice Synthesis (AVS) service without requiring anything else. 
@@ -18,9 +22,7 @@ npm install
 ```
 
 After installation you need to check your **audio setup**, as this module also relies on *arecord/aplay*.
-From your home directory, run command:
-
-> ***sudo nano ~/.asoundrc***
+From your home directory, run command: ***sudo nano ~/.asoundrc***
 
 If it is empty, copy following code to the editor (values might need to be changed):
 
@@ -53,14 +55,22 @@ Then make sure you set the **hw:** and the  **card** vales according to your own
 
 ## Config.js entries and options
 
-### 1. config.js
-To use this module, add it to the modules array in the config/config.js file:
+### 1. Adding MagicMirror to Amazon AVS Service
+
+To use this module, you have to be registered to Amazon AVS service and add you MagicMirror as device/product with using your account in order to use Amazon Alexa service.
+
+Follow this help page to get up and running with Amazon. ***TODO: add instructions***
+
+> Remember that each initial code can be used only once, then it's being converted to token by the module. So if you run your mirror at your computer for testing, you should gather another code.
+
+### 2. config.js
+Add it to the modules array in the config/config.js file:
 
 ```
 {
        module: 'MMM-alexa',
        position: 'top_right', // The status indicator position
-           config: {                                                    // See 'Configuration options' for more information
+           config: {
 		    avsDeviceId: 'my_device/product',
 		    avsClientId: 'amzn1.application-oa2-client.***abcdefgh***',
 		    avsClientSecret: '***abcdefgh***',
@@ -69,9 +79,9 @@ To use this module, add it to the modules array in the config/config.js file:
 		    }
 },
 ```
-> Replace the ***abcdefgh*** with values from later steps 
+> Replace the ***abcdefgh*** with values from **step 3** 
 
-### 2. Configuration options
+### 3. Configuration options
 
 The following properties can be configured:
 
@@ -87,15 +97,7 @@ The following properties can be configured:
 | **`enableRaspberryButton`** | `false` | Enable starting to record with pressing button which is connected to GPIO |
 
 
-### 3. Adding MagicMirror to Amazon AVS Service
-
-You have to be registered to Amazon AVS service, and add you MagicMirror as device/product with using your account in order to use Amazon Alexa service.
-
-Follow this help page to get up and running with Amazon. ***TODO: add instructions***
-
-> Remember that each initial code can be used only once, then it's being converted to token by the module. So if you run your mirror at your computer for testing, you should gather another code.
-
-### 3. Installing microphone dependencies
+### 4. Installing microphone dependencies
 
 After installation you need to check your **audio setup**, as this module also relies on *arecord/aplay*.
 From your home directory, run command:
@@ -126,10 +128,11 @@ Then run this command :
 
 `amixer cset numid=3 1`
 
-### 4. OPTIONAL: Raspberry Pi Button to start recording
+### 5. OPTIONAL: Raspberry Pi Button to start recording
 
 Button should be connected to GPIO pin 4. The button is used only to start recording.
 Do not forget to enable Raspberry Pi button in config. 
+
 
 ## Tested on
 

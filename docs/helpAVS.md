@@ -21,9 +21,20 @@ On following page; fill inn following information:
 
 > Please note more fields than you initially see will pop up as you fill in your answers
 
+| Argument | Description |
+|---|
+| **`avcDeviceId`** | The device/product id  that you've created at Amazon |
+| **`avsClientId`** | The client id which is generated at Amazon |
+| **`avsClientSecret`** | The client secret which is generated at Amazon |
+| **`avsInitialCode`** | The initial code for authentication |
+| **`hideStatusIndicator`** | Hide status indicator on the MM |
+| **`debug`** | `Add `alexaStart()` and `alexaStop()` commands to the MM console |
+| **`enableRaspberryButton`** | Enable starting to record with pressing button which is connected to GPIO |
+
+
 ** Product name** : Fill in a name for your device/product, like *My MagicMirror Project*
 ** Product ID** : Fill in your unique product ID, like *MagicMirror*
-** Please select your product type** : Select **Device with Alexa built-in**
+** Please select your product type** : Select **Application with Alexa built-in**
 ** Will your device use a companion app?** : Select **No**
 ** Product category**: Select what ever you want, like *Smart Home*
 ** Brief product description**: Give it a description, like *This is my project*

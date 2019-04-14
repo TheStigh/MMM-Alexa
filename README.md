@@ -7,7 +7,7 @@
 MMM-Alexa module allows MagicMirror to connect Amazon Alexa Voice Synthesis (AVS) service without requiring anything else. 
 
 > This module do not contain it's own hotword.
-> You will need an external module for this, like [MMM-VoiceCommander](https://github.com/thestigh/MMM-VoiceCommander) to activate Alexa
+> You will need an external module for this like [MMM-VoiceCommander](https://github.com/thestigh/MMM-VoiceCommander) to activate Alexa. Have a look at [MMM-VoiceCommander](https://github.com/thestigh/MMM-VoiceCommander) as it more than a **hotword** module.
 
 ## Installation and requirements
 
@@ -48,7 +48,7 @@ ctl.!default{
 
 > Do you want help to confiure or just deeper understanding *arecord*, [click here](https://github.com/TheStigh/MMM-VoiceCommander/tree/master/docsarecordHelp.md)
 
-Then make sure you set the **hw:** and the  **card** vales according to your own hardware configuration (you get the output at the end of installerscript you just ran) where hw:0,0 representt output and hw:1,0 represent input source. Or you can run the command over again to see the outputs by running `cat /proc/asound/cards`
+Then make sure you set the **hw:** and the  **card** vales according to your own hardware configuration (you get the output at the end of installerscript you just ran) where hw:0,0 represent output and hw:1,0 represent input source.
 
 > ***Save and close*** nano editor
 

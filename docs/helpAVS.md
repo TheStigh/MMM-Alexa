@@ -7,27 +7,27 @@ You will need to register an account at Amazon Developer, [click here to get sta
 
 *Register Account*
 <p align="left">
-   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/1_amazon_create_account.png" height="300">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/imgs/1_amazon_create_account.png" height="300">
 <p>
 
 *Click 'Login with Amazon'*
 <p align="left">
-   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/2_amazon_logged_in.png" height="300">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/imgs/2_amazon_logged_in.png" height="300">
 <p>
 
 *Click 'Create a New Login Profile'*
 <p align="left">
-   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/3_amazon_create_security_profile.png" height="300">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/imgs/3_amazon_create_security_profile.png" height="300">
 <p>
 
 *Fill in the required information for your Security Profile*
 <p align="left">
-   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/4_amazon_creating_profile.png" height="300">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/imgs/4_amazon_creating_profile.png" height="300">
 <p>
 
 *Here you are finished creating the Security Profile*
 <p align="left">
-   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/5_amazon_profile_created.png" height="300">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/imgs/5_amazon_profile_created.png" height="300">
 <p>
  
 
@@ -84,13 +84,13 @@ Go to **[following page](https://thestigh.github.io/MMM-Alexa/)** and copy/paste
 you will most likely get prompted to login in.
 After this step, you should be asked to GRANT access, which you obviously accept:
 <p align="left">
-   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/8_amazon_avs_grant.png" height="300">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/imgs/8_amazon_avs_grant.png" height="300">
 <p>
  
 
 At the end, you will return to the original page and have received the ***avsInitialCode***
 <p align="left">
-   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/9_amazon_avs_received.png" height="300">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/imgs/9_amazon_avs_received.png" height="300">
 <p>
 
 # YOU ARE GOOD TO GO!

@@ -25,25 +25,14 @@ The following properties can be configured:
 
 | Argument |  | Description |
 |---|---|---|
-| **`Product name`** |  | The device/product id  that you've created at Amazon |
-| **`Product ID`** |  | The client id which is generated at Amazon |
-| **`Please select your product type`** |  | The client secret which is generated at Amazon |
-| **`Will your device use a companion app?`** |  | The initial code for authentication |
-| **`Product category`** |  | Hide status indicator on the MM |
-| **`Brief product description`** |  | Add `alexaStart()` and `alexaStop()` commands to the MM console |
-| **`Do you intend to distribute this product commercially?`** |  | Disable voice activity detection(VAD), it's used to understand when the user stops speaking |
-| **`Will your device be used for Alexa for Business?`** |  | Enable starting to record with pressing button which is connected to GPIO |
-| **`Is this device associated with one or more AWS IoT Core Accounts?`** |  | The device/product id  that you've created at Amazon |
-| **`Is this a children’s product or is it otherwise directed to children younger than 13 years old?`** |  | The client id which is generated at Amazon |
+| **`Product name`** |  | Fill in a name for your device/product, like *My MagicMirror Project* |
+| **`Product ID`** |  | Fill in your unique product ID, like *MagicMirror* |
+| **`Please select your product type`** |  | Select **Application with Alexa built-in** |
+| **`Will your device use a companion app?`** |  | Select **No** |
+| **`Product category`** |  | Select what ever you want, like *Smart Home* |
+| **`Brief product description`** |  | Give it a description, like *This is my project* |
+| **`Do you intend to distribute this product commercially?`** |  | Select **No** |
+| **`Will your device be used for Alexa for Business?`** |  | Select **No** |
+| **`Is this device associated with one or more AWS IoT Core Accounts?`** |  | Select **No** |
+| **`Is this a children’s product or is it otherwise directed to children younger than 13 years old?`** |  | Select **No** |
 
-
-** Product name** : Fill in a name for your device/product, like *My MagicMirror Project*
-** Product ID** : Fill in your unique product ID, like *MagicMirror*
-** Please select your product type** : Select **Application with Alexa built-in**
-** Will your device use a companion app?** : Select **No**
-** Product category**: Select what ever you want, like *Smart Home*
-** Brief product description**: Give it a description, like *This is my project*
-** Do you intend to distribute this product commercially?** : Select **No**
-** Will your device be used for Alexa for Business?** : Select **No**
-** Is this device associated with one or more AWS IoT Core Accounts?** : Select **No**
-**Is this a children’s product or is it otherwise directed to children younger than 13 years old?** : Select **No**

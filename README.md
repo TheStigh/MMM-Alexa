@@ -120,7 +120,7 @@ pcm.!default {
 }
 ```
 
-> Do you want help to configure or just deeper understanding *arecord*, [click here](https://github.com/TheStigh/MMM-VoiceCommander/tree/master/docsarecordHelp.md)
+> Do you want help to configure or just deeper understanding *arecord*, [click here](https://github.com/TheStigh/MMM-VoiceCommander/tree/master/docs/arecordHelp.md)
 
 > ***Save and close*** nano editor
 

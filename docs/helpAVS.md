@@ -53,23 +53,25 @@ avsClientSecret = Client Secret
 avsInitialCode= Initial Code
 ```
 
-| Argument |  | Description |
-|---|---|---|
-| Product name |  | Fill in a name for your device/product, like *My MagicMirror Project* |
-| Product ID |  | Fill in your unique product ID, like *MagicMirror* |
-| Please select your product type |  | Select **Application with Alexa built-in** |
-| Product category |  | Select what ever you want, like *Smart Home* |
-| Brief product description |  | Give it a description, like *This is my project* |
-| How will end users interact with your product? |  | Select **Hands-Free** |
-| Do you intend to distribute this product commercially? |  | Select **No** |
-| Is this a children’s product or is it otherwise directed to children younger than 13 years old? |  | Select **No** |
+Argument | Description
+---|---
+Product name | Fill in a name for your device/product, like *My MagicMirror Project*
+Product ID | Fill in your unique product ID, like *MagicMirror*
+Please select your product type | Select **Application with Alexa built-in**
+Product category | Select what ever you want, like *Smart Home*
+Brief product description | Give it a description, like *This is my project*
+How will end users interact with your product? | Select **Hands-Free**
+Do you intend to distribute this product commercially? | Select **No**
+Is this a children’s product or is it otherwise directed to children younger than 13 years old? | Select **No**
 
 On next page, use the dropdown list and select the Security Profile you created earlier
 Then the page is extended, and you will need to add two more lines to it to get finished:
 
-```
-Allowed origins - Type in **https://localhost:9745** and click ADD
-Allowed return URLs - Type in **https://thestigh.github.io/MMM-Alexa/** and click ADD
+
+Argument | Description
+---|---
+Allowed origins | Type in **https://localhost:9745** and click ADD
+Allowed return URLs | Type in **https://thestigh.github.io/MMM-Alexa/** and click ADD
 ```
 
 Tick the checkbox for accepting the ***Agreement***, click **FINISH** and you have successfully set up your product!

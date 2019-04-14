@@ -46,12 +46,15 @@ On following page; fill inn following information:
 > Please note more fields than you initially see will pop up as you fill in your answers.
 
 ***During this process, make a note of following as you will need some in step 3, and all in config.js***
-```
-avsDeviceId = Product ID
-avsClientId = Client ID
-avsClientSecret = Client Secret
-avsInitialCode= Initial Code
-```
+
+* avsDeviceId = Product ID
+
+* avsClientId = Client ID
+
+* avsClientSecret = Client Secret
+
+* avsInitialCode= AVS Initial Code
+
 
 Argument | Description
 ---|---
@@ -72,7 +75,7 @@ Argument | Description
 ---|---
 Allowed origins | Type in **https://localhost:9745** and click ADD
 Allowed return URLs | Type in **https://thestigh.github.io/MMM-Alexa/** and click ADD
-```
+
 
 Tick the checkbox for accepting the ***Agreement***, click **FINISH** and you have successfully set up your product!
 

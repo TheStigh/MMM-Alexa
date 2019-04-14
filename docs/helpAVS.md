@@ -11,11 +11,14 @@ image 2
 ...
 
 ### 2. Time to create your Alexa product
-For easier steps
 Now, you will need to copy and paste this link into your browser:
+
 https://developer.amazon.com/alexa/console/avs/products
 
-On follwoing page; fill inn following information:
+Click **CREATE PRODUCT**
+
+On following page; fill inn following information:
+
 > Please note more fields than you initially see will pop up as you fill in your answers
 
 ** Product name** : Fill in a name for your device/product, like *My MagicMirror Project*

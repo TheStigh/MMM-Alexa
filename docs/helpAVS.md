@@ -66,10 +66,9 @@ On following page; fill inn following information:
 On next page, use the dropdown list and select the Security Profile you created earlier
 Then the page is extended, and you will need to add two more lines to it to get finished:
 
-| Argument |  | Description |
-|---|---|---|
-| Allowed origins |  | Type in **https://localhost:9745** |
-| Allowed return URLs |  | Type in **https://thestigh.github.io/MMM-Alexa/ |
+> Allowed origins - Type in **https://localhost:9745**
+
+> Allowed return URLs - Type in **https://thestigh.github.io/MMM-Alexa/**
 
 Check the ***Agreement***, click **FINISH** and you have set up your Amazon account!
 

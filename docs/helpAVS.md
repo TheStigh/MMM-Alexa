@@ -1,6 +1,8 @@
 ## How to get up and running with Amazon Voice Synthesis (AVS) services
 
-> For easier steps, please keep the browser open at each step, and cop7/paste the links from step 2
+> **For easier steps, please keep the browser open at each step, and copy/paste the links from step 2**
+
+***
 
 ## 1. Register an account
 You will need to register an account at Amazon Developer, [click here to get started](https://www.amazon.com/ap/register?openid.pape.max_auth_age=1&openid.return_to=https%3A%2F%2Fdeveloper.amazon.com%2Fap_login.html&prevRID=58N9KKJN1AEBPGJDP3K1&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=mas_dev_portal&openid.mode=checkid_setup&prepopulatedLoginId=&failedSignInCount=0&language=en_US&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=amzn_developer_portal&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0).

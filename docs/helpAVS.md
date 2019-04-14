@@ -2,7 +2,7 @@
 
 > For easier steps, please keep the browser open at each step, and cop7/paste the links from step 2
 
-#### 1. Register an account
+## 1. Register an account
 You will need to register an account at Amazon Developer, [click here to get started](https://www.amazon.com/ap/register?openid.pape.max_auth_age=1&openid.return_to=https%3A%2F%2Fdeveloper.amazon.com%2Fap_login.html&prevRID=58N9KKJN1AEBPGJDP3K1&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=mas_dev_portal&openid.mode=checkid_setup&prepopulatedLoginId=&failedSignInCount=0&language=en_US&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=amzn_developer_portal&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0).
 
 *Register Account*
@@ -31,7 +31,7 @@ You will need to register an account at Amazon Developer, [click here to get sta
 <p>
  
 
-#### 2. Time to create your Alexa product
+## 2. Time to create your Alexa product
 Now, you will need to copy and paste this link into your browser:
 
 https://developer.amazon.com/alexa/console/avs/products
@@ -73,16 +73,14 @@ Then the page is extended, and you will need to add two more lines to it to get 
 
 Check the ***Agreement***, click **FINISH** and you have set up your Amazon account!
 
-#### 3. Create your 'avsInitialCode'
+## 3. Create your 'avsInitialCode'
 
 Go to **[following page](https://thestigh.github.io/MMM-Alexa/)** and copy/paste **Client ID & Product ID** recorded during step 2.
 
-*Fill in your details according to this example*
+*Fill in your details according to this example and click 'Request Code'*
 <p align="left">
    <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/docs/7_amazon_create_avs.png" height="300">
 <p>
-
-**Click 'Request Code'**
 
 you will most likely get prompted to login in.
 After this step, you should be asked to GRANT access, which you obviously accept:

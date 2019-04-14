@@ -14,14 +14,21 @@ Now, you will need to copy and paste this link into your browser:
 
 https://developer.amazon.com/alexa/console/avs/products
 
-> Click **CREATE PRODUCT**
+On this page, click **CREATE PRODUCT**
 
 On following page; fill inn following information:
 
 > Please note more fields than you initially see will pop up as you fill in your answers.
 
-> During this process, make a note of following as you will need it in step X
-> **Client ID, Client Secret & Product ID**
+***During this process, make a note of following as you will need some in step 3, and all in config.js***
+> avsDeviceId = Product ID
+
+> avsClientId = Client ID
+
+> avsClientSecret = Client Secret
+
+> avsInitialCode= Initial Code
+
 
 | Argument |  | Description |
 |---|---|---|
@@ -42,5 +49,14 @@ Then the page is extended, and you will need to add two more lines to it to get 
 | Allowed origins |  | Type in **https://localhost:9745** |
 | Allowed return URLs |  | Type in **https://thestigh.github.io/MMM-Alexa/ |
 
-Check the *Agreement*, click FINISH and you have set up your Amazon account!
+Check the ***Agreement***, click **FINISH** and you have set up your Amazon account!
+
+#### 3. Create your 'avsInitialCode'
+
+Go to **[following page](https://thestigh.github.io/MMM-Alexa/)** and copy/paste the fields you recorded during step 2.
+
+you will most likely get prompted to login in.
+After this step, you should be asked to GRANT access, which you obviously accept.
+At the end, you will return to the original page and have received the 'avsInitialCode'
+
 

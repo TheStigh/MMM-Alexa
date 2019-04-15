@@ -11,7 +11,7 @@ You will need to register an account at Amazon Developer, [click here to get sta
 
 *Register Account*
 <p align="left">
-   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/imgs/1_amazon_create_account.png" height="300">
+   <img src="https://github.com/TheStigh/MMM-Alexa/blob/master/imgs/1_amazon_create_account.png" width="600">
 <p>
 
 *Click 'Login with Amazon'*

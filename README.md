@@ -46,7 +46,7 @@ ctl.!default{
 }
 ```
 
-> Do you want help to confiure or just deeper understanding *arecord*, [click here](https://github.com/TheStigh/MMM-VoiceCommander/tree/master/docsarecordHelp.md)
+> Do you want help to configure or just deeper understanding *arecord*, [click here](https://github.com/TheStigh/MMM-VoiceCommander/tree/master/docs/arecordHelp.md)
 
 Then make sure you set the **hw:** and the  **card** vales according to your own hardware configuration (you get the output at the end of installerscript you just ran) where hw:0,0 represent output and hw:1,0 represent input source.
 
@@ -85,16 +85,16 @@ Add it to the modules array in the config/config.js file:
 
 The following properties can be configured:
 
-| Argument | Default | Description |
-|---|---|---|
-| **`avcDeviceId`** | `""` | The device/product id  that you've created at Amazon |
-| **`avsClientId`** | `""` | The client id which is generated at Amazon |
-| **`avsClientSecret`** | `""` | The client secret which is generated at Amazon |
-| **`avsInitialCode`** | `""` | The initial code for authentication |
-| **`hideStatusIndicator`** | `false` | Hide status indicator on the MM |
-| **`debug`** | `false` | Add `alexaStart()` and `alexaStop()` commands to the MM console |
-| **`disableVoiceActivityDetection`** | `false` | Disable voice activity detection(VAD), it's used to understand when the user stops speaking |
-| **`enableRaspberryButton`** | `false` | Enable starting to record with pressing button which is connected to GPIO |
+Argument | Description
+ -------------  | -------------
+**`avcDeviceId`** | The device/product id  that you've created at Amazon
+**`avsClientId`** | The client id which is generated at Amazon
+**`avsClientSecret`** | The client secret which is generated at Amazon
+**`avsInitialCode`** | The initial code for authentication
+**`hideStatusIndicator`** | Hide status indicator on the MM
+**`debug`** | `false/true` Add `alexaStart()` and `alexaStop()` commands to the MM console
+**`disableVoiceActivityDetection`** | `false/true` Disable voice activity detection(VAD), it's used to understand when the user stops speaking
+**`enableRaspberryButton`** | `false/true` Enable starting to record with pressing button which is connected to GPIO
 
 
 ### 4. Installing microphone dependencies
@@ -120,7 +120,7 @@ pcm.!default {
 }
 ```
 
-> Do you want help to configure or just deeper understanding *arecord*, [click here](https://github.com/TheStigh/MMM-VoiceCommander/tree/master/docsarecordHelp.md)
+> Do you want help to configure or just deeper understanding *arecord*, [click here](https://github.com/TheStigh/MMM-VoiceCommander/tree/master/docs/arecordHelp.md)
 
 > ***Save and close*** nano editor
 
@@ -136,17 +136,17 @@ Do not forget to enable Raspberry Pi button in config.
 
 ## Tested on
 
-| Hardware Platform    |   Operating System   | Notes                                                                                                                                                                                                                                                                                             |
-| -------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| HP Elite 8300        | ✔  Ubuntu 18.04 LTS  | -                                                                                                                                                                                                                                                                                                 |
-| HP Elite HPEu        | ✔  Ubuntu 16.04 LTS  | -                                                                                                                                                                                                                                                                                                 |
-| HP G60 Laptop        | ✔  Ubuntu 18.04 LTS  | -                                                                                                                                                                                                                                                                                                 |
-| Huawei Matebook Pro  | ✔  Ubuntu 16.04 LTS  | -                                                                                                                                                                                                                                                                                                 |
-| Intel NUC Celeron    | ✔  Ubuntu 16.04 LTS  | -                                                                                                                                                                                                                                                                                                 |
-| Tinker Board S       | ✔  TinkerOS 2.0.8    | -                                                                                                                                                                                                                                                                                                 |
-| Raspberry Pi 3b+     | ✔  Debian Stretch    | -                                                                                                                                                                                                                                                                                                 |
-| Odroid               | ✘                    | Need somebody to test on Odroid!                                                            |
-| Windows              | ✘                    | Need somebody to test on Windows!                                                            |
+Hardware Platform | Operating System | Notes                                                                                                                                                                                                                                                                                             
+-------------------- | -------------------- | --------------------   
+HP Elite 8300        | ✔  Ubuntu 18.04 LTS  | -                                                                                                                                                                                                                                                                                                 
+HP Elite HPEu        | ✔  Ubuntu 16.04 LTS  | -                                                                                                                                                                                                                                                                                                 
+HP G60 Laptop        | ✔  Ubuntu 18.04 LTS  | -                                                                                                                                                                                                                                                                                                 
+Huawei Matebook Pro  | ✔  Ubuntu 16.04 LTS  | -                                                                                                                                                                                                                                                                                                 
+Intel NUC Celeron    | ✔  Ubuntu 16.04 LTS  | -                                                                                                                                                                                                                                                                                                 
+Tinker Board S       | ✔  TinkerOS 2.0.8    | -                                                                                                                                                                                                                                                                                                 
+Raspberry Pi 3b+     | ✔  Debian Stretch    | -                                                                                                                                                                                                                                                                                                 
+Odroid               | ✘                    | Need somebody to test on Odroid!                                                            
+Windows              | ✘                    | Need somebody to test on Windows!                                                            
 
 
 
